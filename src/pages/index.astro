@@ -2,61 +2,254 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout
-  title="Angel Cobo, PhD"
-  description="Scientist and drug development operator. Notes on translational science, venture, and building things that survive contact with biology."
->
-  <h1>Angel Cobo, PhD</h1>
+<BaseLayout title="Angel Cobo, PhD">
+  <main class="about">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Angel Cobo, PhD</h1>
+        <p class="hero-tagline">Scientist and strategic operator in drug development.</p>
+      </div>
+      <div class="hero-photo">
+        <img src="/images/angel-cobo-headshot.png" alt="Portrait of Angel Cobo" />
+      </div>
+    </section>
 
-  <p>
-    [PLACEHOLDER — opening line] I spend most of my working hours asking a
-    question that sounds simple and almost never is: will this actually work
-    in a person, not just on paper.
-  </p>
+    <!-- About Angel -->
+    <section class="bio">
+      <div class="bio-main">
+        <h2>About Angel</h2>
+        <p>Angel is a scientist and strategic operator working at the intersection of drug development, biotechnology, and investment.</p>
+        <p>In his current role, he leads early-stage drug development programs from target validation through IND-enabling studies and NewCo formation. Angel works with investigators, founders, clinicians, and KOLs to pressure-test therapeutic hypotheses, identify critical risks, and design development strategies that generate clear, decision-enabling data.</p>
+        <p>His background in chemistry, pharmacology, and venture investing allows him to evaluate programs from both a scientific and a commercial perspective. He assesses mechanisms, competitive landscapes, translational strategies, development risks, and capital requirements with a focus on improving probability of technical success and establishing meaningful clinical differentiation.</p>
+        <p>What draws Angel most is elegant chemistry, novel mechanisms of action, and emerging biotechnology platforms with the potential to address difficult unmet medical needs. His mission is to work with teams that push scientific boundaries, translate rigorous research into medicines, and build companies that create real value for patients and the biotechnology ecosystem.</p>
+      </div>
+      <aside class="bio-links">
+        <a href="https://ima.stanford.edu/" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          Stanford IMA <span class="arrow">↗</span>
+        </a>
+        <a href="https://orcid.org/0000-0001-9388-3153" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          ORCID <span class="arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/angel-cobo/" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          LinkedIn <span class="arrow">↗</span>
+        </a>
+      </aside>
+    </section>
 
-  <p>
-    [PLACEHOLDER] I'm a scientist and drug development operator at Stanford's
-    Innovative Medicines Accelerator, where I help move early-stage programs
-    from an interesting result in a lab notebook toward something that can
-    survive the much harder scrutiny of clinical development. Before this, I
-    spent time on the other side of the table in venture, at Radicle Growth,
-    evaluating biotech companies and the science underneath their pitch decks.
-    That combination — building programs and diligencing them — shapes how I
-    think more than either one alone would.
-  </p>
+    <!-- Accordions -->
+    <section class="details">
+      <details class="accordion">
+        <summary>Education <span class="icon" aria-hidden="true"></span></summary>
+        <div class="accordion-body">
+          <ul>
+            <li>Ph.D., Chemistry (Designated Emphasis in Biotechnology), University of California, Davis, 2022</li>
+            <li>B.S., Biochemistry (Minor, Chemistry), Georgia Institute of Technology, 2015</li>
+          </ul>
+        </div>
+      </details>
 
-  <p>
-    [PLACEHOLDER] What I care about isn't novelty for its own sake. It's
-    translational risk: the gap between a compelling mechanism and a
-    compound that actually changes outcomes for patients. Most of the
-    interesting failures I've seen weren't failures of biology — they were
-    failures of sequencing, of asking the expensive question too late, or the
-    cheap question not at all. I try to work upstream of that.
-  </p>
+      <details class="accordion">
+        <summary>Professional Experience <span class="icon" aria-hidden="true"></span></summary>
+        <div class="accordion-body">
+          <ul>
+            <li>2022–Present · Scientific Program Manager · Stanford University, Innovative Medicines Accelerator</li>
+            <li>2020–2021 · Venture Capital Investment Associate · Radicle Growth</li>
+            <li>2015–2016 · ORISE Fellow · Centers for Disease Control and Prevention (NCEH/ATSDR)</li>
+          </ul>
+        </div>
+      </details>
 
-  <p>
-    [PLACEHOLDER] I'm drawn to teams and problems where scientific rigor and
-    operational discipline have to coexist — where being right about the
-    biology isn't enough if you can't also be right about timelines, capital,
-    and what to do when the data disagrees with you.
-  </p>
+      <details class="accordion">
+        <summary>Awards &amp; Professional Activities <span class="icon" aria-hidden="true"></span></summary>
+        <div class="accordion-body">
+          <ul>
+            <li>IIFH Fellow ($70K award), UC Davis</li>
+            <li>Business Development Fellow, UC Davis Graduate School of Management</li>
+            <li>InnovationAccess Intern, UC Davis Office of Research</li>
+            <li>CERSI Drug Development Program, UCSF–Stanford</li>
+            <li>Regional i-Corps Immersive Course, National Science Foundation</li>
+            <li>Breaking into the Venture Industry, Stanford Continuing Studies</li>
+            <li>Introduction to Mergers &amp; Acquisitions, Stanford Continuing Studies</li>
+            <li>Protecting Innovation: Life Sciences IP Seminar Series, Morrison Foerster</li>
+          </ul>
+        </div>
+      </details>
 
-  <h2>Currently thinking about</h2>
-  <p>
-    [PLACEHOLDER] How translational risk gets systematically underweighted in
-    early-stage decision-making, and what a better diligence framework for
-    academic-to-industry drug programs might look like. More on this in
-    <a href="/writing">Writing</a>, eventually.
-  </p>
+      <details class="accordion">
+        <summary>Select Publications <span class="icon" aria-hidden="true"></span></summary>
+        <div class="accordion-body">
+          <ul class="publications">
+            <li>
+              Patterson, L.; Coppage, D.; <strong>Cobo, A.</strong>; Segal, D.; Franz, A.K.; et al. Engineered Silyl Lipids to Modulate Liposome and Lipid Nanoparticle Properties for mRNA Delivery. <em>ACS Appl. Bio Mater.</em> 2025, 8 (8), 7216–7227.
+              <a href="https://doi.org/10.1021/acsabm.5c00932" target="_blank" rel="noopener noreferrer" class="doi-link" aria-label="DOI for Engineered Silyl Lipids paper">DOI ↗</a>
+            </li>
+            <li>
+              Ball-Jones, N.; <strong>Cobo, A.</strong>; Franz, A.K.; et al. Ligand-Accelerated Catalysis in Scandium(III)-Catalyzed Asymmetric Spiroannulation Reactions. <em>ACS Catal.</em> 2022, 12 (6), 3524–3533.
+              <a href="https://doi.org/10.1021/acscatal.1c05768" target="_blank" rel="noopener noreferrer" class="doi-link" aria-label="DOI for Ligand-Accelerated Catalysis paper">DOI ↗</a>
+            </li>
+            <li>
+              Wang, Y.; <strong>Cobo, A.</strong>; Franz, A.K. Recent Advances in Organocatalytic Asymmetric Multicomponent Cascade Reactions for Enantioselective Synthesis of Spirooxindoles. <em>Org. Chem. Front.</em> 2021, 8, 4315–4348.
+              <a href="https://doi.org/10.1039/D1QO00220A" target="_blank" rel="noopener noreferrer" class="doi-link" aria-label="DOI for Organocatalytic Asymmetric Multicomponent Cascade Reactions review">DOI ↗</a>
+            </li>
+            <li>
+              Xia, B.; Blount, B.C.; Guillot, T.; Brosius, C.; Li, Y.; Van Bemmel, D.M.; et al. Tobacco-Specific Nitrosamines (NNAL, NNN, NAT, and NAB) Exposures in the US Population Assessment of Tobacco and Health (PATH) Study Wave 1 (2013–2014). <em>Nicotine Tob. Res.</em> 2021, 23 (3), 573–583.
+              <a href="https://doi.org/10.1093/ntr/ntaa110" target="_blank" rel="noopener noreferrer" class="doi-link" aria-label="DOI for Tobacco-Specific Nitrosamines paper">DOI ↗</a>
+            </li>
+            <li>
+              <strong>Cobo, A.</strong>; Armstrong, B.; Fettinger, J.; Franz, A.K. Catalytic Asymmetric Synthesis of Cyclopentene-Spirooxindoles Bearing Vinylsilanes Capable of Further Transformations. <em>Org. Lett.</em> 2019, 21 (20), 8196–8200.
+              <a href="https://doi.org/10.1021/acs.orglett.9b02852" target="_blank" rel="noopener noreferrer" class="doi-link" aria-label="DOI for Catalytic Asymmetric Synthesis paper">DOI ↗</a>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </main>
 
-  <h2>How I work</h2>
-  <p>
-    [PLACEHOLDER — short block on working style/values] Directly, with a bias
-    toward the smallest experiment that would change my mind. I'd rather be
-    corrected quickly than be comfortable for a long time.
-  </p>
+  <style>
+    .about {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
 
-  <p class="meta">
-    Want to get in touch? Visit <a href="/contact">Contact</a>.
-  </p>
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.25rem;
+      color: var(--color-muted);
+      font-style: italic;
+      margin: 0;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Bio */
+    .bio {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .bio-main h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin: 0 0 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .bio-main p {
+      max-width: var(--measure);
+      margin: 0 0 1.25rem;
+    }
+
+    .bio-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      align-self: start;
+    }
+
+    .sidebar-link {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      padding: 1rem 0;
+      color: var(--color-ink);
+      border-bottom: 1px solid var(--color-rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sidebar-link:first-child {
+      border-top: 1px solid var(--color-rule);
+    }
+
+    .sidebar-link .arrow {
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    .sidebar-link:hover {
+      color: var(--color-accent);
+    }
+
+    /* Details / accordions */
+    .details {
+      margin-top: 3rem;
+    }
+
+    .publications {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .publications li {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0 0 1.25rem;
+      padding-left: 1.5rem;
+      text-indent: -1.5rem;
+    }
+
+    .publications li:last-child {
+      margin-bottom: 0;
+    }
+
+    .doi-link {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      color: var(--color-muted);
+      border-bottom: none;
+      margin-left: 0.35rem;
+      white-space: nowrap;
+      transition: color 0.15s ease;
+    }
+
+    .doi-link:hover {
+      color: var(--color-accent);
+    }
+
+    /* Mobile */
+    @media (max-width: 780px) {
+      .about {
+        padding: 2rem 1.25rem;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      .hero-photo {
+        order: -1;
+        max-width: 320px;
+      }
+      .bio {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
 </BaseLayout>

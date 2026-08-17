@@ -1,14 +1,22 @@
 :root {
+  --font-serif: 'Crimson Pro', Charter, Georgia, serif;
+  --font-sans: system-ui, -apple-system, sans-serif;
+
+  --color-ink: #1a1a1a;
+  --color-paper: #fafaf7;
+  --color-muted: #6b6b6b;
+  --color-rule: #e5e3dc;
+  --color-accent: #8b4513;
+
+  --color-prussian: #1B3A6B;
+  --color-copper: #B5622A;
+  --color-eucalyptus: #2E7D5E;
+
+  --measure: 65ch;
+
   --color-text: #1a1a18;
   --color-bg: #faf8f4;
-  --color-muted: #6b6a66;
-  --color-accent: #6a5a4a;
   --color-border: #ded9d0;
-
-  --font-serif: Charter, Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
-  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
-
-  --measure: 68ch;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.75rem;
@@ -23,17 +31,19 @@
 }
 
 html {
-  color-scheme: light;
+  font-family: var(--font-serif);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   margin: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-serif);
-  font-size: 1.125rem;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -65,12 +75,13 @@ p {
 
 a {
   color: var(--color-accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.15em;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
 }
 
 a:hover {
-  text-decoration-thickness: 2px;
+  border-bottom-color: var(--color-accent);
 }
 
 nav,
@@ -101,37 +112,9 @@ main {
   border-bottom: 1px solid var(--color-border);
 }
 
-.site-header nav {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: var(--space-3) var(--space-2);
-  display: flex;
-  gap: var(--space-3);
-}
-
-.site-header nav a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
-}
-
-.site-header nav a:hover {
-  color: var(--color-accent);
-}
-
 .site-footer {
   border-top: 1px solid var(--color-border);
   margin-top: var(--space-5);
-}
-
-.site-footer p {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: var(--space-3) var(--space-2);
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: var(--color-muted);
 }
 
 form {
@@ -206,4 +189,207 @@ button:hover {
 
 .contact-links li {
   margin-bottom: var(--space-1);
+}
+
+/* Site header */
+.site-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.signature-link {
+  border-bottom: none;
+  display: inline-flex;
+}
+
+.signature {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.site-nav a {
+  color: var(--color-ink);
+}
+
+/* Main content grows to push footer down */
+main {
+  flex: 1;
+}
+
+/* Site footer */
+.site-footer {
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  padding: 2rem;
+  border-top: 1px solid var(--color-rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.social-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-nav a {
+  color: var(--color-muted);
+  display: inline-flex;
+  border-bottom: none;
+  transition: color 0.15s ease;
+}
+
+.social-nav a:hover {
+  color: var(--color-ink);
+}
+
+.footer-copy {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* Accordion (native details/summary) */
+.accordion {
+  border-top: 1px solid var(--color-rule);
+}
+
+.accordion:last-of-type {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.accordion summary {
+  list-style: none;
+  padding: 1.25rem 1.5rem;
+  margin: 0.35rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  position: relative;
+  transition: border-color 750ms ease, background-color 750ms ease, opacity 750ms ease;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Wash + outline appear on hover */
+.accordion summary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 1px solid var(--color-copper);
+  background-image: linear-gradient(to left, rgba(184, 207, 232, 0.65), rgba(184, 207, 232, 0) 85%);
+  opacity: 0;
+  transition: opacity 750ms ease;
+  pointer-events: none;
+}
+
+.accordion summary:hover::before {
+  opacity: 1;
+}
+
+/* Animated +/− icon (drawn, not text) */
+.accordion .icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: color 750ms ease;
+  color: var(--color-muted);
+}
+
+.accordion summary:hover .icon {
+  color: var(--color-copper);
+}
+
+.accordion .icon::before,
+.accordion .icon::after {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+  transition: transform 750ms ease;
+}
+
+/* Horizontal line — always visible */
+.accordion .icon::before {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  transform: translateY(-50%);
+}
+
+/* Vertical line — rotates to hide when open */
+.accordion .icon::after {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.accordion[open] .icon::after {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.accordion-body {
+  padding: 0.5rem 1.5rem 1.5rem;
+  color: var(--color-ink);
+}
+
+.accordion-body p {
+  margin: 0 0 0.5rem;
+  line-height: 1.6;
+}
+
+.accordion-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-body li {
+  padding: 0.25rem 0;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .site-header {
+    padding: 1rem 1.25rem;
+  }
+  .signature {
+    height: 36px;
+  }
+  .site-nav {
+    gap: 1.25rem;
+    font-size: 0.85rem;
+  }
+  .site-footer {
+    flex-direction: column;
+    padding: 1.5rem 1.25rem;
+  }
 }
